@@ -48,7 +48,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            docker pull mydockerhubuser/myapp:latest
-            docker stop myapp || true
-            docker rm myapp || true
-            docker run -d --name myapp -p 8080:8080 mydockerhubuser/myapp:latest
+            docker tag myapp ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+            docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+            docker run -d --name myapp -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/myapp:latest
