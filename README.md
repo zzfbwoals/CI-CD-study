@@ -1,2 +1,1 @@
-# CI-CD-study
-Spring Boot + AWS EC2 + Docker + Github Actions 를 통한 CI/CD 구축
+[![Deploy to EC2 with Docker (Single Stage)](https://github.com/zzfbwoals/CI-CD-study/actions/workflows/Deploy.yml/badge.svg?event=deployment)](https://github.com/zzfbwoals/CI-CD-study/actions/workflows/Deploy.yml)
